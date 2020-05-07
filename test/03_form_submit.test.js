@@ -137,6 +137,7 @@ describe("form-submit", () => {
 
       $ = cheerio.load(homeRes.text);
       const lastRowCells = $("tr:last-child td");
+      console.log(lastRowCells.eq(0).text())
       // id colummn:
       expect(lastRowCells.eq(0).text()).to.equal(
         $("tbody tr").length.toString()
